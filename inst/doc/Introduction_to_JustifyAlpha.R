@@ -96,27 +96,25 @@ res6 <- optimal_sample(power_function = "pwr.t.test(d=0.5, n = sample_n, sig.lev
 res6
 
 ## ----eval = FALSE-------------------------------------------------------------
-#  res <- optimal_alpha(power_function = "TOSTER::powerTOSTtwo(alpha=x, N=200, low_eqbound_d=-0.4, high_eqbound_d=0.4) ",
-#                error = "minimize",
-#                costT1T2 = 1,
-#                priorH1H0 = 1)
-#  
-#  res$alpha
-#  res$beta
-#  res$errorrate
-#  res$plot
+# res <- optimal_alpha(power_function = "TOSTER::powerTOSTtwo(alpha=x, N=200, low_eqbound_d=-0.4, high_eqbound_d=0.4) ",
+#               error = "minimize",
+#               costT1T2 = 1,
+#               priorH1H0 = 1)
+# 
+# res$alpha
+# res$beta
+# res$errorrate
+# res$plot
 
-## ---- eval = FALSE------------------------------------------------------------
-#  res <- optimal_alpha(power_function = "Superpower::ANOVA_exact( (Superpower::ANOVA_design(design = '2b', n = 64, mu = c(0, 0.5), sd = 1, plot = FALSE)), alpha_level = x, verbose = FALSE)$main_results$power/100",
-#                error = "minimize",
-#                costT1T2 = 1,
-#                priorH1H0 = 1)
-#  
-#  res$alpha
-#  res$beta
-#  res$errorrate
-#  res$plot
-#  
+## ----eval = FALSE-------------------------------------------------------------
+# res <- optimal_alpha(power_function = "Superpower::ANOVA_exact( (Superpower::ANOVA_design(design = '2b', n = 64, mu = c(0, 0.5), sd = 1, plot = FALSE)), alpha_level = x, verbose = FALSE)$main_results$power/100",
+#               error = "minimize",
+#               costT1T2 = 1,
+#               priorH1H0 = 1)
+# 
+# res$alpha
+# res$beta
+# res$errorrate
 
 ## ----p-plot, fig.width=7, fig.height=5, echo=FALSE, message=FALSE, warning=FALSE, results='hide', fig.cap="*P*-value distributions for a two-sided independent *t*-test with N = 150 and d = 0.5 (black curve) or d = 0 (horizontal dashed line) which illustrates how *p*-values just below 0.05 can be more likely when there is no effect than when there is an effect."----
 N <- 150
